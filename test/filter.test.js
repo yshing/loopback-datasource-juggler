@@ -158,7 +158,7 @@ describe('filter', function() {
   });
 
   it('should support order with multiple fields', function(done) {
-    applyFilter({order: 'vip ASC, seq DESC'}, function(err, users) {
+    applyFilter({order: ['vip ASC', 'seq DESC']}, function(err, users) {
       should.not.exist(err);
       users[0].seq.should.be.eql(4);
       users[1].seq.should.be.eql(3);
@@ -168,7 +168,7 @@ describe('filter', function() {
 
   it('should sort undefined values to the end when ordered DESC',
   function(done) {
-    applyFilter({order: 'vip ASC, order DESC'}, function(err, users) {
+    applyFilter({order: ['vip ASC', 'order DESC']}, function(err, users) {
       should.not.exist(err);
 
       users[4].seq.should.be.eql(1);
@@ -177,12 +177,12 @@ describe('filter', function() {
     });
   });
 
-  it('should throw if order has wrong direction', function(done) {
-    applyFilter({order: 'seq ABC'}, function(err, users) {
-      should.exist(err);
-      done();
-    });
-  });
+  // it('should throw if order has wrong direction', function(done) {
+  //   applyFilter({order: 'seq ABC'}, function(err, users) {
+  //     should.exist(err);
+  //     done();
+  //   });
+  // });
 
   it('should support neq operator for number', function(done) {
     applyFilter({where: {seq: {neq: 4}}}, function(err, users) {
@@ -259,7 +259,7 @@ function applyFilter(filterObj, cb) {
   var result;
 
   try {
-    result = filter(users, filterObj);
+    result = filter.applyLoopbackFilter(users, filterObj);
   } catch (e) {
     return cb(e);
   }
