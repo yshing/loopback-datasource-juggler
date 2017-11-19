@@ -10,3 +10,6 @@ analyse.r
 docs/html
 npm-debug.log
 .travis.yml
+.circleci
+.github
+lib/connectors

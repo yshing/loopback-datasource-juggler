@@ -6,14 +6,15 @@
   },
   "description": "My Loopback filter",
   "keywords": [
-    "StrongLoop",
     "LoopBack",
-    "DataSource",
-    "Connector",
-    "Database",
-    "Juggler",
-    "ORM"
+    "filter",
+    "sort",
+    "sorting",
+    "query"
   ],
+  "bugs": {
+    "url": "https://github.com/yshing/my-loopback-filter/issues"
+  },
   "engines": {
     "node": ">=4.0.0"
   },
