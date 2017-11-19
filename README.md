@@ -11,7 +11,7 @@ Removed the hidden dependency of `nodejs-core/assert` so it should run in browse
 Testcase was taken from @strongloop/loopback-filters.
 
 ## This package exports:
-### 1. applyLoopbackFilter : Fn (<ArrayOfObjects>, <LoopbackStyleFilter>) => Filtered Array (Copied) .
+### 1. applyLoopbackFilter : Fn (\<ArrayOfObjects>, \<LoopbackStyleFilter>) => Filtered Array (Copied) .
 Example:  
 ```js
 var filter = require('my-loopback-filter');
@@ -54,7 +54,7 @@ Morty NO.4 is too far away from destinated location, if maxDestance set to 5 it 
 */
 
 ```
-### 2. whereFilter: Fn (<LoopbackStyleFilter>) => SortingFunction
+### 2. whereFilter: Fn (\<LoopbackStyleFilter>) => SortingFunction
 Example:
 ```js
 var filter = require('my-loopback-filter');
