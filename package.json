@@ -22,9 +22,9 @@
     "url": "https://github.com/yshing/my-loopback-filter"
   },
   "main": "./lib/index.js",
-  "browser": {
-  },
+  "browser": {},
   "scripts": {
+    "test": "mocha"
   },
   "devDependencies": {
     "eslint": "^3.12.2",
@@ -32,9 +32,7 @@
     "mocha": "^2.2.5",
     "should": "^6.0.3"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "license": "MIT",
-  "ci": {
-  }
+  "ci": {}
 }
