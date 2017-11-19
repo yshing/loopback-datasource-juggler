@@ -1,12 +1,14 @@
 # My Loopback Filter.
 
-Current Loopback-filters module doesn't compliance with the actual behavior of the filter function in loopback and Cannot run in browser.
+[![CircleCI](https://circleci.com/gh/yshing/my-loopback-filter.svg?style=svg&circle-token=5ff072c7aa6a9f9a0fa533d29ab223b0fbde72a1)](https://circleci.com/gh/yshing/my-loopback-filter)
 
-This is the Loopback style filter implentmation taken from the current Memory Connector @strongloop/loopback-datasource-juggler.
+Current `Loopback-filters` package doesn't compliance with the actual behavior of the filter function in loopback and cannot run in browser.
+
+Spent few hour to make this, everything is taken from existing Memory Connector Implementation @strongloop/loopback-datasource-juggler, so the beheavior would match.
+
+Removed the hidden dependency of `nodejs-core/assert` so it should run in browser (webpack-ed).
 
 Testcase was taken from @strongloop/loopback-filters.
-
-Modified to suit into both browser (webpack-ed) and node.
 
 ## This package exports:
 ### 1. applyLoopbackFilter : Fn (<ArrayOfObjects>, <LoopbackStyleFilter>) => Filtered Array (Copied) .
